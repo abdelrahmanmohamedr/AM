@@ -8,10 +8,18 @@ let logo = document.getElementById("logo__img") ;
 let body = document.querySelector("body") ;
 let p = document.querySelectorAll("p") ;
 let logoi = document.querySelector("svg") ;
+let header = document.querySelector("header") ;
 let ara = document.querySelector("#Arabic") ;
 let sky = document.querySelector(".dark") ;
+let hvr = document.querySelectorAll(".img_hover") ;
 let ph = document.querySelectorAll(".p__head") ;
-console.log(window.innerWidth);
+console.log(header);
+
+if (header.clientHeight <= 870 && window.innerWidth > 1000) {
+
+  header.style.height = "97vh"
+  
+}
 
 body.style.backgroundColor = window.localStorage.color
 
@@ -25,7 +33,7 @@ dark.onclick = function darkk() {
     for (let l = 0; l < ph.length; l++) {
       ph[l].style.color = "white"
   }
-  if (window.innerWidth <= 767){
+  if (window.innerWidth <= 1000){
     dark.style.transform = "translate(38px,0px)"
     dark.style.transitionDuration = "1s"
   }else{
@@ -35,7 +43,6 @@ dark.onclick = function darkk() {
 
     dark.style.backgroundColor = "white"
     sky.style.backgroundColor = "black"
-    logoi.style.color = "white"
     logo.innerHTML = `<img class="h-100 logo__img" src="logo_dark.png" alt="logo">`
     ara.style.color = "white"
     caru.classList.remove("carousel-dark")
@@ -52,7 +59,6 @@ dark.onclick = function darkk() {
   dark.style.transitionDuration = "1s"
   dark.style.backgroundColor = "orange"
   sky.style.backgroundColor = "#21a9a9f5"
-  logoi.style.color = "black"
   ara.style.color = "black"
   caru.classList.add("carousel-dark")
   logo.innerHTML = `<img class="h-100 logo__img" src="logo.png" alt="logo">`
@@ -68,7 +74,7 @@ dark.onclick = function darkk() {
     for (let l = 0; l < ph.length; l++) {
       ph[l].style.color = "white"
   }
-  if (window.innerWidth <= 767){
+  if (window.innerWidth <= 1000){
     dark.style.transform = "translate(38px,0px)"
     dark.style.transitionDuration = "1s"
   }else{
@@ -77,7 +83,6 @@ dark.onclick = function darkk() {
   }
     dark.style.backgroundColor = "white"
     sky.style.backgroundColor = "black"
-    logoi.style.color = "white"
     ara.style.color = "white"
     caru.classList.remove("carousel-dark")
     logo.innerHTML = `<img class="h-100 logo__img" src="logo_dark.png" alt="logo">`
@@ -94,7 +99,6 @@ dark.onclick = function darkk() {
   dark.style.transitionDuration = "1s"
   dark.style.backgroundColor = "orange"
   sky.style.backgroundColor = "#21a9a9f5"
-  logoi.style.color = "black"
   ara.style.color = "black"
   caru.classList.add("carousel-dark")
   logo.innerHTML = `<img class="h-100 logo__img" src="logo.png" alt="logo">`
@@ -104,7 +108,7 @@ resizee();
 
 function resizee() {
 
-if (window.innerWidth <= 767) {
+if (window.innerWidth <= 1000) {
   cou1.innerHTML = `       <div class="carousel-inner" data-bs-wrap="false">
             <div class="carousel-item active">
               <div class="ci_con row">
@@ -581,7 +585,7 @@ if (window.innerWidth <= 767) {
         <div class="item d-flex">
           <img src="shi.jpg" class="d-block img_sec " alt="...">
           <div class="img_hover d-flex justify-content-center align-items-center">
-            <span>shizume</span>
+            <span>shutter island</span>
           </div>
         </div>
 
